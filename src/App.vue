@@ -5,7 +5,6 @@ import TopMenu from './components/TopMenu.vue'
 <template>
   <TopMenu />
   <RouterView />
-  <div>111111</div>
 </template>
 
 <style scoped>
