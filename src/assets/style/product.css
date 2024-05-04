@@ -1,0 +1,17 @@
+.status {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+
+.status_availible {
+	color: orange;
+	background-color: orange;
+}
+.status_availible_text {
+	color: orange;
+}
+
+.status_notavailible {
+	background-color: red;
+}

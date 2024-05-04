@@ -1,0 +1,131 @@
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all .25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 15px 0 10px -4px rgba(228, 228, 228, 0.8), -12px 0 8px -4px
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.sidebar_logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: red;
+  margin: auto 0;
+}
+.sidebar_logo_2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  background: blue;
+  margin: auto 0;
+}
+
+#sidebar:not(.expand) .sidebar_logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: .625rem 1.625rem;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: .75rem;
+}
+
+
+
+.sidebar-link {
+  text-decoration: none; 
+  position: relative; 
+}
+
+.sidebar-link span {
+  position: relative;
+}
+
+.sidebar-link span::after {
+  content: ""; 
+  position: absolute; 
+  left: 0;
+  bottom: -5px; 
+  width: 0; 
+  height: 3px; 
+  background-color: #3b7ddd;
+  transition: width 0.3s ease; 
+}
+
+.sidebar-link:hover span::after {
+  width: 100%; 
+}
+
+
+
+
+.sidebar-item {
+  position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #0e2238;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 .075rem .075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all .2s ease-out;
+}
