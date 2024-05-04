@@ -1,0 +1,38 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+	<div class="d-flex">
+		<aside id="sidebar" class="expand bg-light">
+			<div class="d-flex">
+				<!-- <button class="toggle-btn" type="button">
+					<i class="lni lni-grid-alt"></i>
+				</button> -->
+				<div class="mx-auto position-relative mt-5 mb-3">
+					<div class="sidebar_logo"></div>
+					<div class="sidebar_logo_2 position-absolute"></div>
+				</div>
+			</div>
+			<ul class="sidebar-nav text-center">
+				<li class="sidebar-item">
+					<router-link to="/" class="sidebar-link">
+						<span>Profile</span>
+					</router-link>
+				</li>
+				<li class="sidebar-item">
+					<router-link to="/" class="sidebar-link">
+						<span>Task</span>
+					</router-link>
+				</li>
+			</ul>
+		</aside>
+		<div class="main p-3">
+			<div class="text-center">
+				<h1>
+					Sidebar Bootstrap 5
+				</h1>
+			</div>
+		</div>
+	</div>
+</template>
