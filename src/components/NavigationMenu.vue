@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Products from '../views/products/Products.vue'
 
 </script>
 
@@ -27,12 +28,9 @@
 				</li>
 			</ul>
 		</aside>
-		<div class="main p-3">
-			<div class="text-center">
-				<h1>
-					Sidebar Bootstrap 5
-				</h1>
-			</div>
+		<div class="main">
+			<Products></Products>
 		</div>
+		
 	</div>
 </template>
