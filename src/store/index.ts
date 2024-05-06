@@ -1,16 +1,8 @@
 import { createStore } from 'vuex';
+import products from './products'
 
 export default createStore({
-  state: {
-    // состояние вашего приложения
-  },
-  mutations: {
-    // мутации для изменения состояния
-  },
-  actions: {
-    // действия для выполнения асинхронных операций
-  },
   modules: {
-    // модули хранилища, если они нужны
+    products,
   }
 });
