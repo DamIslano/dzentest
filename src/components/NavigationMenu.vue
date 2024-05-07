@@ -29,7 +29,7 @@ import Products from '../views/products/Products.vue'
 			</ul>
 		</aside>
 		<div class="main">
-			<Products status></Products>
+			<Products></Products>
 		</div>
 		
 	</div>
