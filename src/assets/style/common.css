@@ -110,3 +110,9 @@ h1 {
     overflow: hidden;
     transition: all 0.35s ease-in-out;
 }
+
+.p-10 {
+  padding: 5rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
