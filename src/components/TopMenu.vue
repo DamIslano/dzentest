@@ -23,7 +23,7 @@ setInterval(() => {
 				<nav class="navbar px-md-1 py-md-4 py-3">
 					<div class="container-fluid">
 						<div class="d-flex">
-							<router-link to="/" class="navbar-brand me-5" style="margin-right: 40px;">
+							<router-link to="/" class="navbar-brand" style="margin-right: 7rem;">
 								<img src="../assets/vue.svg" width="30" height="30" class="d-inline-block align-top" alt="">
 								INVENTORY
 							</router-link>
