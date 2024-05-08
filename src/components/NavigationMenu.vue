@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Products from '../views/products/Products.vue'
 
 </script>
 
@@ -22,14 +21,16 @@ import Products from '../views/products/Products.vue'
 					</router-link>
 				</li>
 				<li class="sidebar-item">
-					<router-link to="/" class="sidebar-link">
-						<span>Task</span>
+					<router-link to="/products" class="sidebar-link">
+						<span>Products</span>
 					</router-link>
 				</li>
 			</ul>
 		</aside>
 		<div class="main">
-			<Products></Products>
+			<div class="container p-10">
+				<RouterView />
+			</div>
 		</div>
 		
 	</div>

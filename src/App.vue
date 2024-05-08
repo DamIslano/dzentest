@@ -6,7 +6,6 @@ import NavigationMenu from './components/NavigationMenu.vue'
 <template>
   <TopMenu />
   <NavigationMenu />
-  <RouterView />
 </template>
 
 <style scoped>

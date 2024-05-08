@@ -42,17 +42,18 @@ const { allProducts } = useStore().getters
 </script>
 
 <template>
-	<div v-for="product in allProducts" :key="product.id" class="card p-2 px-5 mb-3">
+	<div style="overflow-x: auto;">
+		<div v-for="product in allProducts" :key="product.id" class="card p-2 px-5 mb-3">
 		<div class="card-body d-flex align-items-center justify-content-between">
-			<div v-if="status" class="me-4 status status_availible col-1" style="background-color: $green-light;"></div>
-			<div v-if="product.icon" class="me-4 col-1"><ComputerDesktopIcon style="width: 50px;" /></div>
-			<div class="me-4 col-2">
-				<div class="text-decoration-underline">{{ product.product_title }}</div>
+			<div v-if="status" class="me-4 status status_availible" style="min-width: 15px;"></div>
+			<div v-if="product.icon" class="me-4" style="min-width: 80px;"><ComputerDesktopIcon style="width: 50px;" /></div>
+			<div class="me-4" style="min-width: 450px;">
+				<div class="text-decoration-underline">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
 				<div>{{ product.product_subtitle }}</div>
 			</div>
 
-			<div class="me-4 status_availible_text col-1">{{ product.status }}</div>
-			<div v-if="period" class="me-4 text-uppercase col-2 d-flex">
+			<div class="me-4 status_availible_text" style="min-width: 100px;">{{ product.status }}</div>
+			<div v-if="period" class="me-4 text-uppercase d-flex" style="min-width: 250px;">
 				<div class="me-2">
 					<div>from</div>
 					<div>to</div>
@@ -62,19 +63,20 @@ const { allProducts } = useStore().getters
 					<div class="text-primary">{{ product.period_to }}</div>
 				</div>
 			</div>
-			<div v-if="condition" class="me-4 col-1">{{ product.product_condition }}</div>
+			<div v-if="condition" class="me-4" style="min-width: 100px;">{{ product.product_condition }}</div>
 
-			<div v-if="cost" class="me-4 col-1">
+			<div v-if="cost" class="me-4" style="min-width: 150px;">
 				<div>{{ product.cost_USD }} $</div>
 				<div>{{ product.cost_UAH }} UAH</div>
 			</div>
-			<div v-if="productDescription" class="me-4 col-2">{{ product.product_description }}</div>
-			<div v-if="licenseData" class="me-4 col-1">
+			<div v-if="productDescription" class="me-4" style="min-width: 400px;">{{ product.product_description }}</div>
+			<div v-if="licenseData" class="me-4" style="min-width: 250px;">
 				<div>{{ product.product_license }}</div>
 				<div>{{ product.period_to }}</div>
 			</div>
 
-			<div class="me-4 col-3"><TrashIcon style="width: 20px;"/></div>
+			<div class="me-4" style="min-width: 50px;"><TrashIcon style="width: 20px;"/></div>
 		</div>
+	</div>
 	</div>
 </template>
