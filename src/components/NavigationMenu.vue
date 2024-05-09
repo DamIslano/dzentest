@@ -28,7 +28,7 @@
 			</ul>
 		</aside>
 		<div class="main">
-			<div class="container p-10">
+			<div class="p-10">
 				<RouterView />
 			</div>
 		</div>

@@ -116,3 +116,12 @@ h1 {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
 }
+
+.delete-icon {
+  transition: background-color 0.25s ease;
+}
+
+.delete-icon:hover {
+  cursor: pointer;
+  background-color: #6b6b6b41;
+}
