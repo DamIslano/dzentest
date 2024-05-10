@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { ComputerDesktopIcon, TrashIcon } from '@heroicons/vue/24/outline'
+import { TrashIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
 
 const props = defineProps({
-	status: {
-		type: Boolean,
-		default: true
-	},
 	title: {
 		type: String,
 		default: ''
@@ -44,8 +40,8 @@ const { allProducts } = useStore().getters
 	<div class="overflow-auto">
 		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 mb-3 card d-inline-block">
 			<div class="d-flex align-items-center justify-content-between py-2">
-				<div v-if="status" class="me-4 status status_availible" style="min-width: 15px;"></div>
-				<div v-if="product.icon" class="me-4" style="min-width: 80px;"><ComputerDesktopIcon style="width: 50px;" /></div>
+				<div class="me-4 status status_availible" style="min-width: 15px;"></div>
+				<div v-if="product.icon" class="me-4" style="min-width: 80px;"><img src="../../assets/images/computer.png" alt="computer icon" style="width: 50px;"></div>
 				<div class="me-4" style="min-width: 450px;">
 					<div class="text-decoration-underline">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
 					<div>{{ product.product_subtitle }}</div>
