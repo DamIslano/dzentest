@@ -28,7 +28,7 @@ import { Cog8ToothIcon } from '@heroicons/vue/24/outline'
 				</li>
 			</ul>
 		</aside>
-		<div class="main">
+		<div class="main" style="background-color: rgb(240, 243, 245);">
 			<div class="p-10">
 				<RouterView />
 			</div>

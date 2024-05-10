@@ -9,3 +9,10 @@
 	cursor: pointer;
 	background-color: rgb(138, 194, 74);
 }
+
+.order-opened {
+	width: 50px;
+	background: rgb(207, 216, 220);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
