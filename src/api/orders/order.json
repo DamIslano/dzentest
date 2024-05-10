@@ -1,0 +1,64 @@
+{
+	"orders": [
+		{
+			"order_name": "Order test 1",
+			"product_amount": 25,
+			"creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+			"price": {
+				"USD": "2500",
+				"UAH": "100 000.00"
+			}
+		},
+		{
+			"order_name": "Order test 2",
+			"product_amount": 25,
+			"creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+			"price": {
+				"USD": "2500",
+				"UAH": "100 000.00"
+			}
+		},
+		{
+			"order_name": "Order test 3",
+			"product_amount": 25,
+			"creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+			"price": {
+				"USD": "2500",
+				"UAH": "100 000.00"
+			}
+		},
+		{
+			"order_name": "Order test 4",
+			"product_amount": 25,
+			"creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+			"price": {
+				"USD": "2500",
+				"UAH": "100 000.00"
+			}
+		},
+		{
+			"order_name": "Order test 5",
+			"product_amount": 25,
+			"creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+			"price": {
+				"USD": "2500",
+				"UAH": "100 000.00"
+			}
+		}
+	]
+}
