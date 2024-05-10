@@ -16,8 +16,8 @@
 			</div>
 			<ul class="sidebar-nav text-center">
 				<li class="sidebar-item">
-					<router-link to="/" class="sidebar-link">
-						<span>Profile</span>
+					<router-link to="/orders" class="sidebar-link">
+						<span>Orders</span>
 					</router-link>
 				</li>
 				<li class="sidebar-item">

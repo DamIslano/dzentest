@@ -10,7 +10,7 @@ const { allOrders } = useStore().getters
 		<div class="d-flex align-items-center justify-content-between py-1">
 			<div>{{ order.order_name }}</div>
       <div class="d-flex align-items-center">
-				<div class="me-2 d-flex align-items-center justify-content-center rounded-circle border bg-transparent order-list-icon"><ListBulletIcon style="width: 20px;"/></div>
+				<div class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon"><ListBulletIcon style="width: 20px;"/></div>
 				<div>
 					<div>{{ order.product_amount }}</div>
 					<div>Products</div>

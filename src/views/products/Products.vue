@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ComputerDesktopIcon, TrashIcon } from '@heroicons/vue/24/outline'
-import { DefineProps } from 'vue'
 import { useStore } from 'vuex'
 
 const props = defineProps({
