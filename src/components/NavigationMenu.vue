@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Cog8ToothIcon } from '@heroicons/vue/24/outline'
 
 </script>
 
@@ -10,18 +11,18 @@
 					<i class="lni lni-grid-alt"></i>
 				</button> -->
 				<div class="mx-auto position-relative mt-5 mb-3">
-					<div class="sidebar_logo"></div>
-					<div class="sidebar_logo_2 position-absolute"></div>
+					<img src="../assets/images/user.png" alt="avatar image" class="sidebar_logo">
+					<div class="sidebar_logo_2 position-absolute border d-flex alighn-items-center justify-content-center"><Cog8ToothIcon style="width: 20px;"/></div>
 				</div>
 			</div>
 			<ul class="sidebar-nav text-center">
 				<li class="sidebar-item">
-					<router-link to="/orders" class="sidebar-link">
+					<router-link to="/orders" class="sidebar-link" :class="{ active: $route.path === '/orders' }">
 						<span>Orders</span>
 					</router-link>
 				</li>
 				<li class="sidebar-item">
-					<router-link to="/products" class="sidebar-link">
+					<router-link to="/products" class="sidebar-link" :class="{ active: $route.path === '/products' }">
 						<span>Products</span>
 					</router-link>
 				</li>
