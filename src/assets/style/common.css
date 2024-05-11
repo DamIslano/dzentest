@@ -125,3 +125,7 @@ h1 {
   cursor: pointer;
   background-color: #6b6b6b41;
 }
+
+.w-20px {
+  width: 20px
+}

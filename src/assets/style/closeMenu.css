@@ -1,0 +1,12 @@
+.close-menu {
+	width: 40px; 
+	height: 40px; 
+	top: -20px; 
+	right: -20px; 
+	background: white;
+	transition: 0.3s ease
+}
+.close-menu:hover {
+	cursor: pointer;
+	background: rgb(240, 240, 240)
+}

@@ -66,7 +66,7 @@ const { allProducts } = useStore().getters
 					<div>{{ product.period_to }}</div>
 				</div>
 
-				<div class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon style="width: 20px;"/></div>
+				<div class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon class="w-20px"/></div>
 			</div>
 		</div>
 	</div>
