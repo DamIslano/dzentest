@@ -11,8 +11,13 @@
 }
 
 .order-opened {
-	width: 50px;
+	width: 0; 
 	background: rgb(207, 216, 220);
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
+	transition: 0.3s ease; 
+}
+
+.order-opened.active {
+	width: 50px; 
 }
