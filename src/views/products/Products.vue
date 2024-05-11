@@ -2,15 +2,7 @@
 import { TrashIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
 
-const props = defineProps({
-	title: {
-		type: String,
-		default: ''
-	},
-	subtitle: {
-		type: String,
-		default: ''
-	},
+defineProps({
 	cost: {
 		type: Boolean,
 		default: true
@@ -31,14 +23,18 @@ const props = defineProps({
 		type: Boolean,
 		default: true
 	},
+	type: {
+		type: String,
+		default: 'product'
+	}
 })
 
 const { allProducts } = useStore().getters
 </script>
 
 <template>
-	<div class="overflow-auto">
-		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 mb-3 card d-inline-block">
+	<div :class="{ 'd-flex flex-column': type === 'order' }" class="overflow-auto">
+		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5" :class="{ 'mb-3 card d-inline-block border-0': type === 'product', 'border-top': type === 'order' }">
 			<div class="d-flex align-items-center justify-content-between py-2">
 				<div class="me-4 status status_availible" style="min-width: 15px;"></div>
 				<div v-if="product.icon" class="me-4" style="min-width: 80px;"><img src="../../assets/images/computer.png" alt="computer icon" style="width: 50px;"></div>
@@ -70,7 +66,7 @@ const { allProducts } = useStore().getters
 					<div>{{ product.period_to }}</div>
 				</div>
 
-				<div class="me-4 hover-overlay d-flex alighn-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon style="width: 20px;"/></div>
+				<div class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon style="width: 20px;"/></div>
 			</div>
 		</div>
 	</div>
