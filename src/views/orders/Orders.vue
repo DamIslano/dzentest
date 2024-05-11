@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useStore } from 'vuex'
-import { TrashIcon, ListBulletIcon, ChevronRightIcon, PlusIcon } from '@heroicons/vue/24/outline'
+import { TrashIcon, ListBulletIcon, ChevronRightIcon, PlusIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import Products from '../products/Products.vue';
 
 const { allOrders } = useStore().getters
@@ -19,6 +19,12 @@ const toggleMenu = (index: number) => {
 </script>
 
 <template>
+	<div class="d-flex align-items-center mb-5">
+		<div class="me-2 rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; background-color: green; border: 2px solid orange;">
+			<PlusIcon style="width: 17px; color: white;"/>
+		</div>
+		<div>Orders / 25</div>
+	</div>
 	<div :class="{ 'd-flex justify-content-between': !fullMenu }">
 		<div :style="{ 'min-width': fullMenu ? '' : '30%' }" class="me-3">
 			<div 
@@ -30,7 +36,7 @@ const toggleMenu = (index: number) => {
 				<div class="d-flex align-items-center py-1" :class="{ 'justify-content-between': fullMenu }">
 					<div v-if="fullMenu" style="max-width: 180px; width: 100%;">{{ order.order_name }}</div>
 					<div class="d-flex align-items-center">
-						<div @click="toggleMenu(idx)" class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon"><ListBulletIcon style="width: 20px;"/></div>
+						<div @click="toggleMenu(idx)" class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon"><ListBulletIcon class="w-20px"/></div>
 						<div class="me-5">
 							<div>{{ order.product_amount }}</div>
 							<div>Products</div>
@@ -44,21 +50,28 @@ const toggleMenu = (index: number) => {
 						<div>{{ order.price.USD }} $</div>
 						<div>{{ order.price.UAH }} UAH</div>
 					</div>
-					<div v-if="fullMenu" class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon style="width: 20px;"/></div>
+					<div v-if="fullMenu" class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon" style="min-width: 50px; height: 50px;"><TrashIcon class="w-20px"/></div>
 					<div v-show="openedOrderIndex === idx && !fullMenu" class="position-absolute end-0 h-100 d-flex align-items-center justify-content-center order-opened" :class="{ active: openedOrderIndex === idx && !fullMenu }"><ChevronRightIcon style="width: 25px; color: white;"/></div>
 				</div>
 			</div>
 		</div>
-		<div v-if="!fullMenu" class="w-100 card p-0 pt-4">
+		<div v-if="!fullMenu" class="w-100 card p-0 pt-4 position-relative">
+			<div @click="fullMenu = !fullMenu" class="position-absolute d-flex align-items-center justify-content-center rounded-circle shadow close-menu">
+				<XMarkIcon class="w-20px"/>
+			</div>
 			<div class="px-5">
 				<div class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, eum reiciendis. Ex voluptates aspernatur harum vel. Consequatur quis repellendus reiciendis.</div>
 				<div class="d-flex align-items-center mb-3">
-					<PlusIcon class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: green; color: white;"/>
+					<div class="me-2 rounded-circle d-flex align-items-center justify-content-center" style="width: 20px; height: 20px; background-color: green;">
+						<PlusIcon style="width: 17px; color: white;"/>
+					</div>
 					<div>Add product</div>
 				</div>
 			</div>
 			<ul class="list-group list-group-flush border-top-0">
-				<li class="list-group-item p-0"><Products type="order" :period="false" :productDescription="false" :cost="false" :licenseData="false" :condition="false"/></li>
+				<li class="list-group-item p-0">
+					<Products type="order" :period="false" :productDescription="false" :cost="false" :licenseData="false" :condition="false"/>
+				</li>
 			</ul>
 		</div>
 	</div>
