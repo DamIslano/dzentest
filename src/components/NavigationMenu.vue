@@ -12,7 +12,7 @@ import { Cog8ToothIcon } from '@heroicons/vue/24/outline'
 				</button> -->
 				<div class="mx-auto position-relative mt-5 mb-3">
 					<img src="../assets/images/user.png" alt="avatar image" class="sidebar_logo">
-					<div class="sidebar_logo_2 position-absolute border d-flex alighn-items-center justify-content-center"><Cog8ToothIcon style="width: 20px;"/></div>
+					<div class="sidebar_logo_2 position-absolute border d-flex align-items-center justify-content-center"><Cog8ToothIcon style="width: 20px;"/></div>
 				</div>
 			</div>
 			<ul class="sidebar-nav text-center">
