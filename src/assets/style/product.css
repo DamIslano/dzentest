@@ -4,14 +4,14 @@
 	border-radius: 50%;
 }
 
-.status_availible {
+.status_available {
 	color: orange;
 	background-color: orange;
 }
-.status_availible_text {
+.status_available_text {
 	color: orange;
 }
 
-.status_notavailible {
+.status_notavailable {
 	background-color: red;
 }
