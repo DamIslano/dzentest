@@ -3,25 +3,25 @@ import productsList from '../api/products/product.json'
 export default {
   state() {
     return {
-      products: productsList.products
+      products: productsList.products,
+      type: 'Available',
+      specification: 'Used',
     }
   },
   getters: {
-    allProducts: state => state.products,
+    allProducts: state => {
+      console.log(state.products);
+      return state.products
+      
+      // state.products.sort((a, b) => {
+      //   // console.log(111, state.type.indexOf(a.status) - state.type.indexOf(b.status));
+      //   return state[property].indexOf(b.status) - state[property].indexOf(a.status)
+      // }) 
+    } 
   },
   mutations: {
-    // loadTaskList(state, payload) {
-    //   state.taskList = payload
-    // },
-  },
-  actions: {
-    // async setTask({ dispatch }, obj) {
-    //   try {
-    //     await axios.post(`test`, {...obj})
-    //     await dispatch('getTask')
-    //   } catch(e) {
-    //     throw new Error(e)
-    //   }
-    // },
+    setProductType(state, newType) {
+      state.type = newType
+    }
   },
 }
