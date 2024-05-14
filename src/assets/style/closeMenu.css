@@ -6,7 +6,17 @@
 	background: white;
 	transition: 0.3s ease
 }
-.close-menu:hover {
+
+.close-menu-modal {
+	width: 36px;
+	height: 36px; 
+	top: -18px; 
+	right: -18px; 
+	background: white;
+	transition: 0.3s ease
+}
+
+.close-menu:hover, .close-menu-modal:hover {
 	cursor: pointer;
 	background: rgb(240, 240, 240)
 }
