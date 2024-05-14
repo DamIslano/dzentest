@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { TrashIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 defineProps({
 	cost: {
@@ -31,53 +31,17 @@ defineProps({
 })
 
 const store = useStore()
-const allProducts = useStore().getters.allProducts
-
-// const selectType = ref('')
+const allProducts = computed(() => store.getters.allProducts)
 
 const productType = ref('')
 const productSpecification = ref('')
-store.state.type = productType.value
-// console.log(store.state.type);
 
-
-
-
-// const avabilitySort = (condition) => allProducts.sort((a, b) => condition.indexOf(a.status) - condition.indexOf(b.status))
-// const availableProducts = () => avabilitySort(["Available", "Sold"])
-// const soldProducts = () => avabilitySort(["Sold", "Available"])
-
-// const conditionSort = (condition) => allProducts.sort((a, b) => condition.indexOf(a.product_condition) - condition.indexOf(b.product_condition))
-// const newProducts = () => conditionSort(["New", "Used", "Refurbished"])
-// const usedProducts = () => conditionSort(["Used", "New", "Refurbished"])
-// const refurbishedProducts = () => conditionSort(["Refurbished", "New", "Used"])
-
-// const actionMap = {
-// 	"Available": availableProducts,
-// 	"Sold": soldProducts,
-// 	"New": newProducts,
-// 	"Used": usedProducts,
-// 	"Refurbished": refurbishedProducts
-// };
-
-// watch(selectType, (newV) => {
-//     const action = actionMap[newV];
-//     if (action) action()
-// });
-// watch(productType, (newV) => {
-//   store.commit('setProductType', newV)
-// 	console.log(1, store.state.type);
-// });
-
-
-
-// watch(productType, (newV) => {
-//   store.state.type = newV
-// 	console.log(2, store.state.type);
-// });
-// watch(allProducts, (newV) => {
-//   console.log(111, allProducts, newV);
-// });
+watch(productType, (newV) => {
+	store.commit('setProductType', newV)
+});
+watch(productSpecification, (newV) => {
+	store.commit('setProductSpecification', newV)
+});
 </script>
 
 <template>
@@ -88,6 +52,7 @@ store.state.type = productType.value
 			<div class="input-group position-relative">
 				<!-- <div class="position-absolute">selectType |</div> -->
 				<select class="custom-select border-0" style="width: 200px; outline: none;" v-model="productType">
+					<option value=""></option>
 					<option value="Available">Available</option>
 					<option value="Sold">Sold</option>
 				</select>
@@ -97,6 +62,7 @@ store.state.type = productType.value
 			<div class="me-2">Specification:</div>
 			<div class="input-group">
 				<select class="custom-select border-0" style="width: 200px; outline: none;" v-model="productSpecification">
+					<option value=""></option>
 					<option value="New">New</option>
 					<option value="Used">Used</option>
 					<option value="Refurbished">Refurbished</option>

@@ -4,24 +4,23 @@ export default {
   state() {
     return {
       products: productsList.products,
-      type: 'Available',
-      specification: 'Used',
+      type: '',
+      specification: '',
     }
   },
   getters: {
     allProducts: state => {
-      console.log(state.products);
-      return state.products
-      
-      // state.products.sort((a, b) => {
-      //   // console.log(111, state.type.indexOf(a.status) - state.type.indexOf(b.status));
-      //   return state[property].indexOf(b.status) - state[property].indexOf(a.status)
-      // }) 
-    } 
+      return state.products.filter(item => {
+        return (!state.type || item.status === state.type) && (!state.specification || item.product_condition === state.specification);
+      });
+    }
   },
   mutations: {
     setProductType(state, newType) {
       state.type = newType
-    }
+    },
+    setProductSpecification(state, newSpecification) {
+      state.specification = newSpecification
+    },
   },
 }
