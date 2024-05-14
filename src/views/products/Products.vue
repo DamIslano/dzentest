@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TrashIcon } from '@heroicons/vue/24/outline'
+import { TrashIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
 import { computed, ref, watch } from 'vue';
 
@@ -35,6 +35,10 @@ const allProducts = computed(() => store.getters.allProducts)
 
 const productType = ref('')
 const productSpecification = ref('')
+const clearValues = () => {
+	productType.value = ''
+	productSpecification.value = ''
+}
 
 watch(productType, (newV) => {
 	store.commit('setProductType', newV)
@@ -50,23 +54,26 @@ watch(productSpecification, (newV) => {
 		<div class="d-flex align-items-center me-5">
 			<div class="me-2">Type:</div>
 			<div class="input-group position-relative">
-				<!-- <div class="position-absolute">selectType |</div> -->
 				<select class="custom-select border-0" style="width: 200px; outline: none;" v-model="productType">
-					<option value=""></option>
 					<option value="Available">Available</option>
 					<option value="Sold">Sold</option>
 				</select>
 			</div>
 		</div>
-		<div class="d-flex align-items-center">
+		<div class="d-flex align-items-center me-5">
 			<div class="me-2">Specification:</div>
 			<div class="input-group">
 				<select class="custom-select border-0" style="width: 200px; outline: none;" v-model="productSpecification">
-					<option value=""></option>
 					<option value="New">New</option>
 					<option value="Used">Used</option>
 					<option value="Refurbished">Refurbished</option>
 				</select>
+			</div>
+		</div>
+		<div v-if="productType || productSpecification" @click="clearValues" class="d-flex align-items-center">
+			<div class="me-2">*Clear filter:</div>
+			<div class="d-flex align-items-center justify-content-center rounded-circle filter-clear">
+				<XMarkIcon class="w-20px"/>
 			</div>
 		</div>
 	</div>

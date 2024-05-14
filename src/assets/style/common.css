@@ -129,3 +129,13 @@ h1 {
 .w-20px {
   width: 20px
 }
+
+.filter-clear {
+  width: 35px; 
+  height: 35px; 
+  transition: background-color 0.25s ease;
+}
+.filter-clear:hover {
+  cursor: pointer;
+  background-color: #6b6b6b41;
+}
