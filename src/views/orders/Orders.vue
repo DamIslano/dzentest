@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 import { TrashIcon, ListBulletIcon, ChevronRightIcon, PlusIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import Products from '../products/Products.vue';
+import Products from '../products/Products.vue'
 import Modal from '../../components/Modal.vue'
 
 const { allOrders } = useStore().getters

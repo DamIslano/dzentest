@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { TrashIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
-import { computed, ref, watch } from 'vue';
-import { useRouter } from 'vue-router';
+import { computed, ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
 
 defineProps({
 	cost: {
@@ -45,11 +45,11 @@ const clearValues = () => {
 watch(productType, (newV) => {
 	store.commit('setProductType', newV)
 	route.push({ query: { type: newV } })
-});
+})
 watch(productSpecification, (newV) => {
 	store.commit('setProductSpecification', newV)
 	route.push({ query: { specification: newV } })
-});
+})
 </script>
 
 <template>
