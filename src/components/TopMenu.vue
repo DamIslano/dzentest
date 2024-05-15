@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { ClockIcon } from '@heroicons/vue/24/outline'
+import { useRouter } from 'vue-router'
 const currentDay = ref(getCurrentDateTime())
 const currentTime = ref('Loading...')
+const search = ref('')
+const router = useRouter()
 
 function getCurrentDateTime() {
   const now = new Date();
@@ -15,6 +18,10 @@ setInterval(() => {
 	currentDay.value = getCurrentDateTime();
 	currentTime.value = new Intl.DateTimeFormat('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date())
 }, 1000);
+
+watch(search, (newV) => {
+	router.push({ query: { search: newV ? newV : undefined } })
+})
 </script>
 
 <template>
@@ -28,7 +35,7 @@ setInterval(() => {
 								INVENTORY
 							</router-link>
 							<form class="d-flex" role="search">
-								<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+								<input v-model="search" class="form-control me-2 shadow-none border" type="search" placeholder="Search" aria-label="Search">
 							</form>
 						</div>
 						<div class="d-none d-md-block">
