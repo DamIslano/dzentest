@@ -12,7 +12,7 @@ const isOpen = ref(false)
 </script>
 
 <template>
-	<button @click="isOpen = true" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+	<button @click="isOpen = true" type="button" class="btn btn-primary">
 		Launch demo modal
 	</button>
 

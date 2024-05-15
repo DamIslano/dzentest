@@ -99,7 +99,7 @@ h1 {
 }
 
 .main {
-  min-height: 100vh;
+  min-height: calc(100vh - 96px);
   width: 100%;
   overflow: hidden;
   transition: all 0.35s ease-in-out;
