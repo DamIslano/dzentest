@@ -1,17 +1,17 @@
-.status {
+.product-status {
 	min-width: 15px;
 	height: 15px;
 	border-radius: 50%;
 }
 
-.status_available {
+.product-available {
 	color: orange;
 	background-color: orange;
 }
-.status_available_text {
+.product-available-text {
 	color: orange;
 }
 
-.status_notavailable {
+.product-disable {
 	background-color: red;
 }

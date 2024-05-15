@@ -61,11 +61,6 @@ button:focus-visible {
   padding: 2em;
 }
 
-#app {
-  /* max-width: 1280px;
-  margin: 0 auto; */
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -81,34 +76,33 @@ button:focus-visible {
 
 ::after,
 ::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
-
 
 .wrapper {
   display: flex;
 }
 
 .main {
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    transition: all 0.35s ease-in-out;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
 }
 
 .p-10 {
@@ -126,8 +120,75 @@ h1 {
   background-color: #6b6b6b41;
 }
 
+.w-15px {
+  width: 15px;
+}
+
+.width-17px {
+  width: 17px;
+}
+
 .w-20px {
   width: 20px
+}
+
+.w-25px {
+  width: 25px
+}
+
+.w-50px {
+  width: 50px
+}
+
+.w-h-50px {
+  width: 50px; 
+  height: 50px;
+}
+
+.w-h-20px {
+  width: 20px; 
+  height: 20px;
+}
+
+.max-w-full-180px {
+  max-width: 180px; 
+  width: 100%;
+}
+
+.min-w-15px {
+  min-width: 15px;
+}
+
+.min-w-80px {
+  min-width: 80px;
+}
+
+.min-w-450px {
+  min-width: 450px;
+}
+
+.min-w-150px {
+  min-width: 150px;
+}
+
+.min-w-250px {
+  min-width: 250px;
+}
+
+.min-w-400px {
+  min-width: 400px;
+}
+
+.min-w-100px {
+  min-width: 100px;
+}
+
+.min-w-120px {
+  min-width: 120px;
+}
+
+.min-h-35px {
+  min-height: 35px;
 }
 
 .filter-clear {
@@ -135,7 +196,48 @@ h1 {
   height: 35px; 
   transition: background-color 0.25s ease;
 }
+
 .filter-clear:hover {
   cursor: pointer;
   background-color: #6b6b6b41;
+}
+
+.col-green {
+  color: rgb(139, 195, 74)
+}
+
+.col-green-bg {
+  background-color: rgb(139, 195, 74);
+}
+
+.letter-spacing-75 {
+	letter-spacing: 0.75px;
+}
+
+.border-radius-25px {
+  border-radius: 25px;
+}
+
+.me-7rem {
+  margin-right: 7rem;
+}
+
+.plus-icon-bg {
+  width: 40px; 
+  height: 40px; 
+  background-color: green; 
+  border: 2px solid orange;
+}
+
+.custom-select {
+  width: 200px; 
+  outline: none;
+}
+
+.bg-light-primary {
+  background-color: rgb(240, 243, 245);
+}
+
+.icon-white {
+  color: white;
 }

@@ -71,8 +71,6 @@ a.sidebar-link {
   margin-right: .75rem;
 }
 
-
-
 .sidebar-link {
   text-decoration: none; 
   position: relative; 
@@ -96,9 +94,6 @@ a.sidebar-link {
 .sidebar-link:hover span::after {
   width: 108%; 
 }
-
-
-
 
 .sidebar-item {
   position: relative;
