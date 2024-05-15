@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { TrashIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 defineProps({
@@ -40,20 +40,36 @@ const productSpecification = ref('')
 const clearValues = () => {
 	productType.value = ''
 	productSpecification.value = ''
+	nextTick(() => {
+		route.push({ query: {} })
+	})
 }
 
 watch(productType, (newV) => {
 	store.commit('setProductType', newV)
-	route.push({ query: { type: newV } })
+	route.push({ query: { ...route.currentRoute.value.query, type: newV ? newV : undefined } })
 })
 watch(productSpecification, (newV) => {
 	store.commit('setProductSpecification', newV)
-	route.push({ query: { specification: newV } })
+	route.push({ query: { ...route.currentRoute.value.query, specification: newV ? newV : undefined } })
+})
+
+onMounted(() => {
+	const queryType = route.currentRoute.value.query.type
+	const querySpecification = route.currentRoute.value.query.specification
+
+	if(queryType) {
+		store.commit('setProductType', queryType)
+		productType.value = queryType.toString()
+	}
+	if(querySpecification) {
+		store.commit('setProductSpecification', querySpecification)
+		productSpecification.value = querySpecification.toString()
+	}
 })
 </script>
 
 <template>
-	<!-- <pre>{{ route.currentRoute.value.query.type }}</pre> -->
 	<div v-if="type === 'product'" class="d-flex align-items-center mb-5 min-h-35px">
 		<div class="me-5">Orders / 25</div>
 		<div class="d-flex align-items-center me-5">
