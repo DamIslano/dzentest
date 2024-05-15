@@ -1,12 +1,13 @@
 import ordersList from '../api/orders/order.json'
+import type { Order, OrderState } from '../interfaces/orders'
 
 export default {
-	state() {
+	state(): OrderState {
     return {
-      orders: ordersList.orders
+      orders: ordersList.orders as Order[]
     }
   },
   getters: {
-    allOrders: state => state.orders,
+    allOrders: (state: OrderState) => state.orders,
   },
 }

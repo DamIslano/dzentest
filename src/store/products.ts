@@ -1,25 +1,26 @@
 import productsList from '../api/products/product.json'
+import type { Product, ProductState} from '../interfaces/products'
 
 export default {
-  state() {
+  state(): ProductState {
     return {
-      products: productsList.products,
+      products: productsList.products as Product[],
       type: '',
       specification: '',
     }
   },
   getters: {
-    allProducts: state => {
+    allProducts: (state: ProductState) => {
       return state.products.filter(item => {
         return (!state.type || item.status === state.type) && (!state.specification || item.product_condition === state.specification);
       });
     }
   },
   mutations: {
-    setProductType(state, newType) {
+    setProductType(state: ProductState, newType: string) {
       state.type = newType
     },
-    setProductSpecification(state, newSpecification) {
+    setProductSpecification(state: ProductState, newSpecification: string) {
       state.specification = newSpecification
     },
   },
