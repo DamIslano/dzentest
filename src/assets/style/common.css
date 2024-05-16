@@ -111,6 +111,7 @@ h1 {
   padding: 5rem;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+  max-height: 100vh;
 }
 
 .delete-icon {
@@ -155,6 +156,10 @@ h1 {
 .max-w-full-180px {
   max-width: 180px; 
   width: 100%;
+}
+
+.max-w-min-content {
+  max-width: min-content;
 }
 
 .min-w-15px {

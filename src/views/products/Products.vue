@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { TrashIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { useStore } from 'vuex'
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch, defineEmits } from 'vue'
 import { useRouter } from 'vue-router'
 
 defineProps({
@@ -28,12 +28,33 @@ defineProps({
 	type: {
 		type: String,
 		default: 'product'
+	},
+	deleteProductMenu: {
+		type: Boolean,
+		default: true
+	},
+	selectedProduct: {
+		type: Array,
+		default: []
+	},
+	statusTitle: {
+		type: Boolean,
+		default: true
+	},
+	classes: {
+		type: Array,
+		default: []
 	}
 })
 
 const store = useStore()
 const route = useRouter()
 const allProducts = computed(() => store.getters.allProducts)
+
+const emit = defineEmits(['deleteProduct'])
+const deletingProduct = (product: Object) => {
+	emit('deleteProduct', product)
+}
 
 const productType = ref('')
 const productSpecification = ref('')
@@ -99,8 +120,16 @@ onMounted(() => {
 		</div>
 	</div>
 	<div :class="{ 'd-flex flex-column': type === 'order' }" class="overflow-auto">
-		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 product-hovered d-inline-block" :class="{ 'mb-3 card border': type === 'product', 'border-top': type === 'order' }">
-			<div class="d-flex align-items-center justify-content-between py-2">
+		<div 
+			v-for="product in (selectedProduct.length ? selectedProduct : allProducts)" 
+			:key="product.id" 
+			class="p-2 px-5 product-hovered d-inline-block" 
+			:class="
+				classes, 
+				{ 'mb-3 card border': type === 'product', 'border-top': type === 'order' }
+			"
+		>
+			<div class="d-flex align-items-center py-2" :class="{ 'justify-content-between': !classes }">
 				<div class="me-4 product-status min-w-15px" :class="product.status === 'Available' ? 'product-available' : 'product-disabled'"</div>
 				<div v-if="product.icon" class="me-4 min-w-80px"><img src="../../assets/images/computer.png" alt="computer icon" class="w-50px"></div>
 				<div class="me-4 min-w-450px">
@@ -108,7 +137,14 @@ onMounted(() => {
 					<div class="text-grey-light">{{ product.product_subtitle }}</div>
 				</div>
 
-				<div class="me-4 min-w-100px" :class="product.status === 'Available' ? 'product-available-text' : 'product-disabled-text'">{{ product.status }}</div>
+				<div 
+					v-if="statusTitle" 
+					class="me-4 min-w-100px" 
+					:class="[
+						{ 'flex-grow-1': type === 'order' }, 
+						product.status === 'Available' ? 'product-available-text' : 'product-disabled-text'
+					]"
+				>{{ product.status }}</div>
 				<div v-if="period" class="me-5 text-uppercase min-w-150px">
 					<div class="text-grey-light d-flex align-items-end justify-content-between">
 						<div class="fsz-11px mb-2px">from</div>
@@ -133,7 +169,7 @@ onMounted(() => {
 					</div>
 				</div>
 
-				<div class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon w-h-50px"><TrashIcon class="w-20px"/></div>
+				<div v-if="deleteProductMenu" @click="deletingProduct(product)" class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon w-h-50px"><TrashIcon class="w-20px"/></div>
 			</div>
 		</div>
 	</div>
