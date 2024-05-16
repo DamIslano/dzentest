@@ -31,6 +31,7 @@ const toggleMenu = (index: number) => {
 		<div :style="{ 'min-width': fullMenu ? '' : '30%' }" class="me-3">
 			<div 
 				v-for="(order, idx) in allOrders" 
+				@click="toggleMenu(idx)"
 				class="p-2 mb-3 card position-relative order-hovered"
 				:class="{ 'px-3': !fullMenu, 'px-5': fullMenu }" 
 				:style="{ width: fullMenu ? '' : '100%' }"
@@ -38,7 +39,7 @@ const toggleMenu = (index: number) => {
 				<div class="d-flex align-items-center py-1" :class="{ 'justify-content-between': fullMenu }">
 					<div v-if="fullMenu" class="max-w-full-180px text-decoration-underline">{{ order.order_name }}</div>
 					<div class="d-flex align-items-center">
-						<div @click="toggleMenu(idx)" class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon"><ListBulletIcon class="w-20px"/></div>
+						<div class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon" :class="{ 'order-list-icon_active': openedOrderIndex === idx && !fullMenu }"><ListBulletIcon class="w-20px"/></div>
 						<div class="me-5">
 							<div>{{ order.product_amount }}</div>
 							<div class="text-grey-light">Products</div>
@@ -63,11 +64,11 @@ const toggleMenu = (index: number) => {
 			</div>
 			<div class="px-5">
 				<div class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, eum reiciendis. Ex voluptates aspernatur harum vel. Consequatur quis repellendus reiciendis.</div>
-				<div class="d-flex align-items-center mb-3">
-					<div class="me-2 rounded-circle d-flex align-items-center justify-content-center w-h-20px" style=" background-color: green;">
+				<div class="d-flex align-items-center mb-3 product-menu">
+					<div class="me-2 rounded-circle d-flex align-items-center justify-content-center w-h-20px product-menu-green-bg">
 						<PlusIcon class="width-17px icon-white"/>
 					</div>
-					<div>Add product</div>
+					<div class="product-menu-green-text">Add product</div>
 				</div>
 			</div>
 			<ul class="list-group list-group-flush border-top-0">

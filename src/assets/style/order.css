@@ -7,7 +7,12 @@
 
 .order-list-icon:hover {
 	cursor: pointer;
-	background-color: rgb(138, 194, 74);
+	background-color: rgb(207, 216, 220);
+}
+
+.order-list-icon_active {
+	cursor: pointer;
+	background-color: rgb(207, 216, 220);
 }
 
 .order-opened {
