@@ -99,36 +99,38 @@ onMounted(() => {
 		</div>
 	</div>
 	<div :class="{ 'd-flex flex-column': type === 'order' }" class="overflow-auto">
-		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5" :class="{ 'mb-3 card d-inline-block border': type === 'product', 'border-top': type === 'order' }">
+		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 product-hovered" :class="{ 'mb-3 card d-inline-block border': type === 'product', 'border-top': type === 'order' }">
 			<div class="d-flex align-items-center justify-content-between py-2">
-				<div class="me-4 product-status product-available col-green min-w-15px"></div>
+				<div class="me-4 product-status min-w-15px" :class="product.status === 'Available' ? 'product-available' : 'product-disabled'"</div>
 				<div v-if="product.icon" class="me-4 min-w-80px"><img src="../../assets/images/computer.png" alt="computer icon" class="w-50px"></div>
 				<div class="me-4 min-w-450px">
 					<div class="text-decoration-underline">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-					<div>{{ product.product_subtitle }}</div>
+					<div class="text-grey-light">{{ product.product_subtitle }}</div>
 				</div>
 
-				<div class="me-4 product-available-text col-green min-w-100px">{{ product.status }}</div>
-				<div v-if="period" class="me-4 text-uppercase d-flex min-w-250px">
-					<div class="me-2">
-						<div>from</div>
-						<div>to</div>
+				<div class="me-4 min-w-100px" :class="product.status === 'Available' ? 'product-available-text' : 'product-disabled-text'">{{ product.status }}</div>
+				<div v-if="period" class="me-5 text-uppercase min-w-150px">
+					<div class="text-grey-light d-flex align-items-end justify-content-between">
+						<div class="fsz-11px mb-2px">from</div>
+						<div class="text-grey-light">{{ product.period_from }}</div>
 					</div>
-					<div>
-						<div class="text-secondary">{{ product.period_from }}</div>
-						<div class="text-primary">{{ product.period_to }}</div>
+					<div class="d-flex align-items-end justify-content-between">
+						<div class="fsz-11px mb-2px">to</div>
+						<div>{{ product.period_to }}</div>
 					</div>
 				</div>
 				<div v-if="condition" class="me-4 min-w-100px">{{ product.product_condition }}</div>
 
 				<div v-if="cost" class="me-4 min-w-150px">
-					<div>{{ product.cost_USD }} $</div>
+					<div class="text-grey-light">{{ product.cost_USD }} $</div>
 					<div>{{ product.cost_UAH }} UAH</div>
 				</div>
-				<div v-if="productDescription" class="me-4 min-w-400px">{{ product.product_description }}</div>
-				<div v-if="licenseData" class="me-4 min-w-250px">
-					<div>{{ product.product_license }}</div>
-					<div>{{ product.period_to }}</div>
+				<div v-if="productDescription" class="me-4 min-w-400px text-decoration-underline">{{ product.product_description }}</div>
+				<div v-if="licenseData" class="me-4 min-w-250px d-flex">
+					<div class="text-center">
+						<div class="text-grey-light">{{ product.product_license }}</div>
+						<div>{{ product.period_to }}</div>
+					</div>
 				</div>
 
 				<div class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon w-h-50px"><TrashIcon class="w-20px"/></div>

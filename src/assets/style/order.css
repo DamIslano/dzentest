@@ -21,3 +21,12 @@
 .order-opened.active {
 	width: 50px; 
 }
+
+.order-hovered {
+	transition: 0.3s ease;
+}
+
+.order-hovered:hover {
+	cursor: pointer;
+	box-shadow: 0 10px 20px rgb(206, 208, 209)
+}

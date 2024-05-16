@@ -26,6 +26,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-weight: 500;
+  color: rgb(44, 60, 68);
 }
 
 h1 {
@@ -177,6 +179,7 @@ h1 {
 
 .min-w-400px {
   min-width: 400px;
+  width: 400px;
 }
 
 .min-w-100px {
@@ -200,10 +203,6 @@ h1 {
 .filter-clear:hover {
   cursor: pointer;
   background-color: #6b6b6b41;
-}
-
-.col-green {
-  color: rgb(139, 195, 74)
 }
 
 .col-green-bg {
@@ -240,4 +239,20 @@ h1 {
 
 .icon-white {
   color: white;
+}
+
+.icon-clock-green {
+  color: rgb(129, 190, 57)
+}
+
+.mb-2px {
+  margin-bottom: 2px;
+}
+
+.text-grey-light {
+  color: rgb(150, 168, 178)
+}
+
+.fsz-11px {
+  font-size: 11px;
 }

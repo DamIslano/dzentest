@@ -43,7 +43,7 @@ watch(search, (newV) => {
 								<div>Today</div>
 								<div class="d-flex flex-row">
 									<div class="me-3">{{ currentDay }}</div>
-									<div class="d-flex align-items-center"><ClockIcon class="w-15px me-1" style="color:red"/> {{ currentTime }}</div>
+									<div class="d-flex align-items-center"><ClockIcon class="w-15px me-1 icon-clock-green"/> {{ currentTime }}</div>
 								</div>
 							</div>
 						</div>

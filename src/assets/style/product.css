@@ -5,13 +5,26 @@
 }
 
 .product-available {
-	color: orange;
-	background-color: orange;
-}
-.product-available-text {
-	color: orange;
+	background-color: rgb(205, 220, 57);
 }
 
-.product-disable {
-	background-color: red;
+.product-disabled {
+	background-color: rgb(43, 59, 67)
+}
+
+.product-available-text {
+	color: rgb(204, 220, 56);
+}
+
+.product-disabled-text {
+	color: rgb(43, 59, 67)
+}
+
+.product-hovered {
+	transition: 0.3s ease;
+}
+
+.product-hovered:hover {
+	cursor: pointer;
+	box-shadow: 8px 7px 17px rgb(206, 208, 209)
 }

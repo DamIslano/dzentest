@@ -31,25 +31,25 @@ const toggleMenu = (index: number) => {
 		<div :style="{ 'min-width': fullMenu ? '' : '30%' }" class="me-3">
 			<div 
 				v-for="(order, idx) in allOrders" 
-				class="p-2 mb-3 card position-relative"
+				class="p-2 mb-3 card position-relative order-hovered"
 				:class="{ 'px-3': !fullMenu, 'px-5': fullMenu }" 
 				:style="{ width: fullMenu ? '' : '100%' }"
 			>
 				<div class="d-flex align-items-center py-1" :class="{ 'justify-content-between': fullMenu }">
-					<div v-if="fullMenu" class="max-w-full-180px">{{ order.order_name }}</div>
+					<div v-if="fullMenu" class="max-w-full-180px text-decoration-underline">{{ order.order_name }}</div>
 					<div class="d-flex align-items-center">
 						<div @click="toggleMenu(idx)" class="me-2 d-flex align-items-center justify-content-center rounded-circle border order-list-icon"><ListBulletIcon class="w-20px"/></div>
 						<div class="me-5">
 							<div>{{ order.product_amount }}</div>
-							<div>Products</div>
+							<div class="text-grey-light">Products</div>
 						</div>
 					</div>
 					<div>
-						<div>{{ order.creation_date.short }}</div>
+						<div class="text-grey-light">{{ order.creation_date.short }}</div>
 						<div>{{ order.creation_date.full }}</div>
 					</div>
 					<div class="min-w-120px" v-if="fullMenu">
-						<div>{{ order.price.USD }} $</div>
+						<div class="text-grey-light">{{ order.price.USD }} $</div>
 						<div>{{ order.price.UAH }} UAH</div>
 					</div>
 					<div v-if="fullMenu" class="me-4 hover-overlay d-flex align-items-center justify-content-center rounded-circle delete-icon w-h-50px"><TrashIcon class="w-20px"/></div>
