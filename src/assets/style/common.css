@@ -126,7 +126,7 @@ h1 {
   width: 15px;
 }
 
-.width-17px {
+.w-17px {
   width: 17px;
 }
 
@@ -224,8 +224,8 @@ h1 {
 .plus-icon-bg {
   width: 40px; 
   height: 40px; 
-  background-color: green; 
-  border: 2px solid orange;
+  background-color: rgb(139, 195, 74); 
+  border: 3px solid rgb(92, 172, 49);
 }
 
 .custom-select {

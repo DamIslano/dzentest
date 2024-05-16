@@ -99,7 +99,7 @@ onMounted(() => {
 		</div>
 	</div>
 	<div :class="{ 'd-flex flex-column': type === 'order' }" class="overflow-auto">
-		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 product-hovered" :class="{ 'mb-3 card d-inline-block border': type === 'product', 'border-top': type === 'order' }">
+		<div v-for="product in allProducts" :key="product.id" class="p-2 px-5 product-hovered d-inline-block" :class="{ 'mb-3 card border': type === 'product', 'border-top': type === 'order' }">
 			<div class="d-flex align-items-center justify-content-between py-2">
 				<div class="me-4 product-status min-w-15px" :class="product.status === 'Available' ? 'product-available' : 'product-disabled'"</div>
 				<div v-if="product.icon" class="me-4 min-w-80px"><img src="../../assets/images/computer.png" alt="computer icon" class="w-50px"></div>
@@ -129,7 +129,7 @@ onMounted(() => {
 				<div v-if="licenseData" class="me-4 min-w-250px d-flex">
 					<div class="text-center">
 						<div class="text-grey-light">{{ product.product_license }}</div>
-						<div>{{ product.period_to }}</div>
+						<div>{{ product.product_arrivalDate }}</div>
 					</div>
 				</div>
 
