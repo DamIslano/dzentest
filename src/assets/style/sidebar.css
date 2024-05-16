@@ -2,10 +2,10 @@
   width: 70px;
   min-width: 70px;
   z-index: 1000;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   display: flex;
   flex-direction: column;
-  box-shadow: 15px 0 10px -4px rgba(228, 228, 228, 0.8), -12px 0 8px -4px
+  box-shadow: 15px 0 10px -4px rgba(228, 228, 228, 0.8), -12px 0 8px -4px;
 }
 
 #sidebar.expand {
@@ -43,7 +43,7 @@
 
 .sidebar_logo_2:hover {
   cursor: pointer;
-  transform: rotate(360deg)
+  transform: rotate(360deg);
 }
 
 #sidebar:not(.expand) .sidebar_logo,
@@ -57,7 +57,7 @@
 }
 
 a.sidebar-link {
-  padding: .625rem 1.625rem;
+  padding: 0.625rem 1.625rem;
   color: black;
   text-transform: uppercase;
   display: block;
@@ -68,12 +68,12 @@ a.sidebar-link {
 
 .sidebar-link i {
   font-size: 1.1rem;
-  margin-right: .75rem;
+  margin-right: 0.75rem;
 }
 
 .sidebar-link {
-  text-decoration: none; 
-  position: relative; 
+  text-decoration: none;
+  position: relative;
 }
 
 .sidebar-link span {
@@ -81,18 +81,18 @@ a.sidebar-link {
 }
 
 .sidebar-link span::after {
-  content: ""; 
-  position: absolute; 
+  content: '';
+  position: absolute;
   left: -3px;
-  bottom: -5px; 
-  width: 0; 
-  height: 3px; 
+  bottom: -5px;
+  width: 0;
+  height: 3px;
   background-color: rgb(135, 193, 68);
-  transition: width 0.3s ease; 
+  transition: width 0.3s ease;
 }
 
 .sidebar-link:hover span::after {
-  width: 108%; 
+  width: 108%;
 }
 
 .sidebar-item {
@@ -109,31 +109,31 @@ a.sidebar-link {
   display: none;
 }
 
-#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
   display: block;
   max-height: 15em;
   width: 100%;
   opacity: 1;
 }
 
-#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+#sidebar.expand .sidebar-link[data-bs-toggle='collapse']::after {
   border: solid;
-  border-width: 0 .075rem .075rem 0;
-  content: "";
+  border-width: 0 0.075rem 0.075rem 0;
+  content: '';
   display: inline-block;
   padding: 2px;
   position: absolute;
   right: 1.5rem;
   top: 1.4rem;
   transform: rotate(-135deg);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+#sidebar.expand .sidebar-link[data-bs-toggle='collapse'].collapsed::after {
   transform: rotate(45deg);
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .sidebar-link.active span::after {
-  width: 108%; 
+  width: 108%;
 }

@@ -1,43 +1,43 @@
 .product-status {
-	min-width: 15px;
-	height: 15px;
-	border-radius: 50%;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 50%;
 }
 
 .product-available {
-	background-color: rgb(205, 220, 57);
+  background-color: rgb(205, 220, 57);
 }
 
 .product-disabled {
-	background-color: rgb(43, 59, 67)
+  background-color: rgb(43, 59, 67);
 }
 
 .product-available-text {
-	color: rgb(204, 220, 56);
+  color: rgb(204, 220, 56);
 }
 
 .product-disabled-text {
-	color: rgb(43, 59, 67)
+  color: rgb(43, 59, 67);
 }
 
 .product-hovered {
-	transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .product-hovered:hover {
-	cursor: pointer;
-	box-shadow: 8px 7px 17px rgb(206, 208, 209)
+  cursor: pointer;
+  box-shadow: 8px 7px 17px rgb(206, 208, 209);
 }
 
 .product-menu:hover {
-	width: fit-content;
-	cursor: pointer;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .product-menu-green-bg {
-	background: rgb(139, 195, 74);
+  background: rgb(139, 195, 74);
 }
 
 .product-menu-green-text {
-	color: rgb(139, 195, 74);
+  color: rgb(139, 195, 74);
 }

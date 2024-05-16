@@ -1,29 +1,29 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Products from '../views/products/Products.vue';
-import Orders from '../views/orders/Orders.vue';
-import Dashboard from '../views/Dashboard.vue';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import Products from '../views/products/Products.vue'
+import Orders from '../views/orders/Orders.vue'
+import Dashboard from '../views/Dashboard.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/products',
     name: 'Products',
-    component: Products
+    component: Products,
   },
   {
     path: '/orders',
     name: 'Orders',
-    component: Orders
+    component: Orders,
   },
   {
     path: '/',
     name: 'Home',
-    component: Dashboard
+    component: Dashboard,
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-});
+  routes,
+})
 
-export default router;
+export default router

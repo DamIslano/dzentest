@@ -5,6 +5,6 @@ import orders from './orders'
 export default createStore({
   modules: {
     products,
-    orders
-  }
+    orders,
+  },
 })

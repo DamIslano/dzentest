@@ -1,37 +1,37 @@
 .order-list-icon {
-	width: 35px;
-	height: 35px;
-	background: transparent;
-	transition: background-color 0.25s ease;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  transition: background-color 0.25s ease;
 }
 
 .order-list-icon:hover {
-	cursor: pointer;
-	background-color: rgb(207, 216, 220);
+  cursor: pointer;
+  background-color: rgb(207, 216, 220);
 }
 
 .order-list-icon_active {
-	cursor: pointer;
-	background-color: rgb(207, 216, 220);
+  cursor: pointer;
+  background-color: rgb(207, 216, 220);
 }
 
 .order-opened {
-	width: 0; 
-	background: rgb(207, 216, 220);
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	transition: 0.3s ease; 
+  width: 0;
+  background: rgb(207, 216, 220);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.3s ease;
 }
 
 .order-opened.active {
-	width: 50px; 
+  width: 50px;
 }
 
 .order-hovered {
-	transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .order-hovered:hover {
-	cursor: pointer;
-	box-shadow: 0 10px 20px rgb(206, 208, 209)
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgb(206, 208, 209);
 }

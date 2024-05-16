@@ -1,5 +1,5 @@
 import productsList from '../api/products/product.json'
-import type { Product, ProductState} from '../interfaces/products'
+import type { Product, ProductState } from '../interfaces/products'
 
 export default {
   state(): ProductState {
@@ -12,9 +12,9 @@ export default {
   getters: {
     allProducts: (state: ProductState) => {
       return state.products.filter(item => {
-        return (!state.type || item.status === state.type) && (!state.specification || item.product_condition === state.specification);
-      });
-    }
+        return (!state.type || item.status === state.type) && (!state.specification || item.product_condition === state.specification)
+      })
+    },
   },
   mutations: {
     setProductType(state: ProductState, newType: string) {

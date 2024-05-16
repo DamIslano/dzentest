@@ -3,7 +3,7 @@ export interface Product {
   icon: string
   product_title: string
   product_subtitle: string
-  product_condition: string 
+  product_condition: string
   product_description: string
   product_arrivalDate: string
   product_license: string
@@ -15,7 +15,7 @@ export interface Product {
 }
 
 export interface ProductState {
-	products: Product[]
-	type: string
-	specification: string
+  products: Product[]
+  type: string
+  specification: string
 }

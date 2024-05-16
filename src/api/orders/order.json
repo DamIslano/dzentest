@@ -1,69 +1,69 @@
 {
-	"orders": [
-		{
-			"id": 1,
-			"order_name": "Order test 1 Order test 1",
-			"product_amount": 25,
-			"creation_date": {
-				"full": "2024 / May / 01",
-				"short": "01 / 05"
-			},
-			"price": {
-				"USD": "1000",
-				"UAH": "40 000.00"
-			}
-		},
-		{
-			"id": 2,
-			"order_name": "Order test 2",
-			"product_amount": 25,
-			"creation_date": {
-				"full": "2024 / May / 01",
-				"short": "01 / 05"
-			},
-			"price": {
-				"USD": "5000",
-				"UAH": "200 000.00"
-			}
-		},
-		{
-			"id": 3,
-			"order_name": "Order test 3 Order test 3 Order test 3",
-			"product_amount": 25,
-			"creation_date": {
-				"full": "2024 / May / 01",
-				"short": "01 / 05"
-			},
-			"price": {
-				"USD": "3500",
-				"UAH": "140 000.00"
-			}
-		},
-		{
-			"id": 4,
-			"order_name": "Order test 4 Order test 4",
-			"product_amount": 25,
-			"creation_date": {
-				"full": "2024 / May / 01",
-				"short": "01 / 05"
-			},
-			"price": {
-				"USD": "2500",
-				"UAH": "100 000.00"
-			}
-		},
-		{
-			"id": 5,
-			"order_name": "Order test 5 Order test 5 Order test 5",
-			"product_amount": 25,
-			"creation_date": {
-				"full": "2024 / May / 01",
-				"short": "01 / 05"
-			},
-			"price": {
-				"USD": "200",
-				"UAH": "8 000.00"
-			}
-		}
-	]
+  "orders": [
+    {
+      "id": 1,
+      "order_name": "Order test 1 Order test 1",
+      "product_amount": 25,
+      "creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+      "price": {
+        "USD": "1000",
+        "UAH": "40 000.00"
+      }
+    },
+    {
+      "id": 2,
+      "order_name": "Order test 2",
+      "product_amount": 25,
+      "creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+      "price": {
+        "USD": "5000",
+        "UAH": "200 000.00"
+      }
+    },
+    {
+      "id": 3,
+      "order_name": "Order test 3 Order test 3 Order test 3",
+      "product_amount": 25,
+      "creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+      "price": {
+        "USD": "3500",
+        "UAH": "140 000.00"
+      }
+    },
+    {
+      "id": 4,
+      "order_name": "Order test 4 Order test 4",
+      "product_amount": 25,
+      "creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+      "price": {
+        "USD": "2500",
+        "UAH": "100 000.00"
+      }
+    },
+    {
+      "id": 5,
+      "order_name": "Order test 5 Order test 5 Order test 5",
+      "product_amount": 25,
+      "creation_date": {
+        "full": "2024 / May / 01",
+        "short": "01 / 05"
+      },
+      "price": {
+        "USD": "200",
+        "UAH": "8 000.00"
+      }
+    }
+  ]
 }

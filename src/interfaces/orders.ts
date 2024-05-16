@@ -13,5 +13,5 @@ export interface Order {
 }
 
 export interface OrderState {
-	orders: Order[]
+  orders: Order[]
 }

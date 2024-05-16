@@ -8,5 +8,4 @@ import NavigationMenu from './components/NavigationMenu.vue'
   <NavigationMenu />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

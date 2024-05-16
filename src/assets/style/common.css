@@ -35,9 +35,9 @@ h1 {
   line-height: 1.1;
 }
 
-input[type="search"]::placeholder {
+input[type='search']::placeholder {
   font-weight: bold;
-  font-size: 14px; 
+  font-size: 14px;
 }
 
 button {
@@ -132,29 +132,29 @@ h1 {
 }
 
 .w-20px {
-  width: 20px
+  width: 20px;
 }
 
 .w-25px {
-  width: 25px
+  width: 25px;
 }
 
 .w-50px {
-  width: 50px
+  width: 50px;
 }
 
 .w-h-50px {
-  width: 50px; 
+  width: 50px;
   height: 50px;
 }
 
 .w-h-20px {
-  width: 20px; 
+  width: 20px;
   height: 20px;
 }
 
 .max-w-full-180px {
-  max-width: 180px; 
+  max-width: 180px;
   width: 100%;
 }
 
@@ -200,8 +200,8 @@ h1 {
 }
 
 .filter-clear {
-  width: 35px; 
-  height: 35px; 
+  width: 35px;
+  height: 35px;
   transition: background-color 0.25s ease;
 }
 
@@ -215,7 +215,7 @@ h1 {
 }
 
 .letter-spacing-75 {
-	letter-spacing: 0.75px;
+  letter-spacing: 0.75px;
 }
 
 .border-radius-25px {
@@ -227,14 +227,14 @@ h1 {
 }
 
 .plus-icon-bg {
-  width: 40px; 
-  height: 40px; 
-  background-color: rgb(139, 195, 74); 
+  width: 40px;
+  height: 40px;
+  background-color: rgb(139, 195, 74);
   border: 3px solid rgb(92, 172, 49);
 }
 
 .custom-select {
-  width: 200px; 
+  width: 200px;
   outline: none;
 }
 
@@ -247,7 +247,7 @@ h1 {
 }
 
 .icon-clock-green {
-  color: rgb(129, 190, 57)
+  color: rgb(129, 190, 57);
 }
 
 .mb-2px {
@@ -255,7 +255,7 @@ h1 {
 }
 
 .text-grey-light {
-  color: rgb(150, 168, 178)
+  color: rgb(150, 168, 178);
 }
 
 .fsz-11px {
