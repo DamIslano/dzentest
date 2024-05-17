@@ -1,8 +1,9 @@
 # Dashboard Panel | TestProject
 
-Dashboard panel with Orders & Products pages.
+Dashboard panel with Order & Product pages.
 
-![hover-game-prev](demo/aivia.gif)
+## Preview
+![dashboard-preview](demo/dashboard.gif)
 
 ### Project setup
 
